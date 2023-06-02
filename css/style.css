@@ -16,6 +16,7 @@ button{
 .section-header{
     margin-top: 2.3rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .list-group{
@@ -24,5 +25,9 @@ button{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.list-item{
+    margin-bottom: 1.5rem;
 }
