@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-Project</title>
+    <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/task_manager.js"></script>
@@ -13,7 +14,7 @@
 <body>
 
     
-<div class="container mt-5">
+<div class="container mt-3">
 
     <header>
         <h1>Create a Task</h1>
@@ -45,10 +46,51 @@
           </div>
       </form>
 
-
-</div>
+      <!-- dummy tasks -->
+    <section class="new-task-container">
+      <h2 class="section-header">My Tasks</h2>
+      <div class="list-group">
+        <div class="list-item">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Take out trash</h5>
+              <p class="card-text">Trash pickup is on thursday morning, have bins ready outside</p>
+              <h6 class="card-subtitle mb-2 text-muted">Assigned to: Nick</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Due Date: 2023-02-04</h6>
+              <span class="badge bg-primary">IN PROGRESS</span>
+              <button type="button" class="btn btn-primary">DELETE</button>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Deep clean kitchen</h5>
+              <p class="card-text">Clean microwave, stove, remove old food from fridge and organize pantry</p>
+              <h6 class="card-subtitle mb-2 text-muted">Assigned to: Sarah</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Due Date: 2023-02-04</h6>
+              <span class="badge bg-success">DONE</span>
+              <button type="button" class="btn btn-primary">DELETE</button>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Take out trash</h5>
+              <p class="card-text">Trash pickup is on thursday morning, have bins ready outside</p>
+              <h6 class="card-subtitle mb-2 text-muted">Assigned to: Nick</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Due Date: 2023-02-04</h6>
+              <span class="badge bg-warning">PENDING</span>
+              <button type="button" class="btn btn-primary">DELETE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
 </body>
 </html>
