@@ -11,3 +11,18 @@ label, input, textarea{
 button{
     margin-top: 0.5rem;
 }
+
+
+.section-header{
+    margin-top: 2.3rem;
+    margin-bottom: 2rem;
+}
+
+.list-group{
+    width: 100%;
+    margin-bottom: 2.3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
