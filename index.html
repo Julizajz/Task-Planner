@@ -23,21 +23,21 @@
     <form id="newTaskForm">
         <div class="form-group">
           <label for="taskName">Name</label>
-          <input type="text" class="form-control" id="taskName" placeholder="Enter a name for your task">
+          <input type="text" class="form-control" id="taskName" placeholder="Enter a name for your task" required>
         </div>
         <div class="form-group">
           <label for="taskDescription">Description</label>
-          <textarea class="form-control" id="taskDescription" rows="3" placeholder="Enter a description for your task"></textarea>
+          <textarea class="form-control" id="taskDescription" rows="3" placeholder="Enter a description for your task" required></textarea>
         </div>
         
         <div class="row">
             <div class="col">
                 <label for="assignedTo">Assigned To</label>
-                <input type="text" class="form-control" id="assignedTo" placeholder="Assign your task to someone">
+                <input type="text" class="form-control" id="assignedTo" placeholder="Assign your task to someone" required>
             </div>
             <div class="col">
                 <label for="dueDate">Due date</label>
-                <input type="date" class="form-control" id="dueDate">
+                <input type="date" class="form-control" id="dueDate" required>
             </div>
           </div>
 
