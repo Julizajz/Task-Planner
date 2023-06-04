@@ -2,7 +2,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
     return `<div class="list-item">
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">${name}</h5>
+        <h5 class="card-title">${name} <span class="badge bg-danger">${status}</span></h5>
         <p class="card-text">${description}</p>
         <h6 class="card-subtitle mb-2 text-muted">Assigned to: ${assignedTo}</h6>
         <h6 class="card-subtitle mb-2 text-muted">Due Date: ${dueDate}</h6>
