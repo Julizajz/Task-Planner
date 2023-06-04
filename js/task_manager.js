@@ -6,7 +6,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
         <p class="card-text">${description}</p>
         <h6 class="card-subtitle mb-2 text-muted">Assigned to: ${assignedTo}</h6>
         <h6 class="card-subtitle mb-2 text-muted">Due Date: ${dueDate}</h6>
-        <button type="button" class="btn btn-success">Mark As Done</button>
+        <button type="button" class="btn btn-success done-button">Mark As Done</button>
         <button type="button" class="btn btn-primary">DELETE</button>
       </div>
     </div>
