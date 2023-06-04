@@ -1,5 +1,5 @@
 const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
-    `<div class="list-item">
+    return `<div class="list-item">
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${name}</h5>
@@ -31,6 +31,29 @@ class TaskManager {
         }
 
         this.tasks.push(task)
+    }
+
+    render() {
+     // variable storing html tasks
+        const tasksHtmlList = [];
+
+        for(let i = 0; i < this.tasks.length; i++) {
+            // variable for current task in loop
+            const task = this.tasks[i];
+            // fix date
+            const date = new Date(task.dueDate);
+            const formattedDate = `${date.getDate()} / ${date.getMonth() + 1} / ${date.getFullYear()}`;
+            // variable that creates task html
+            const taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, formattedDate, task.status );
+
+            tasksHtmlList.push(taskHtml);
+        }
+
+        const tasksHtml = tasksHtmlList.join('/n');
+
+        const tasksList = document.getElementById('tasksList');
+        tasksList.innerHTML = tasksHtml;
+
     }
 
 }
