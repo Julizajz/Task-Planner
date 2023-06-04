@@ -4,9 +4,14 @@ body{
 }
 
 
-label, input, textarea{
+label{
     margin-bottom: 0.8rem;
 }
+
+input, textarea{
+    margin-bottom: 0.5rem;
+}
+
 
 button{
     margin-top: 0.5rem;
