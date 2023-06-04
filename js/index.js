@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    
+    // intitialises new instance of TaskManager
+    const taskManager = new TaskManager();
     // task form selector
     const newTaskForm = document.getElementById('newTaskForm')
     
@@ -22,10 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const assignedTo = newAssignedToInput.value;
         const dueDate = newDueDateInput.value;
         
-        console.log(`Name: ${name}`);
-        console.log(`Description: ${description}`);
-        console.log(`Assigned To: ${assignedTo}`);
-        console.log(`Due: ${dueDate}`);
+        // puts inputs into addTask array
+        taskManager.addTask(
+            name,
+            description,
+            assignedTo,
+            dueDate
+        )
+
+        // 
+        // console.log(`Name: ${name}`);
+        // console.log(`Description: ${description}`);
+        // console.log(`Assigned To: ${assignedTo}`);
+        // console.log(`Due: ${dueDate}`);
         
         // validates for min lenght of 4 characters
         if (name.length > 4) {
@@ -67,9 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
             failValidation++;
         }
         
+        console.log(taskManager);
         
     })
 });
+
+
 
 
 
