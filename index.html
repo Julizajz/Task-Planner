@@ -27,7 +27,7 @@
           <div class="invalid-feedback">
             Please choose a name for your task.
           </div>
-          <div class="valid-feedback">Looks good!</div>
+          <div class="valid-feedback"></div>
         </div>
         <div class="form-group">
           <label for="taskDescription">Description</label>
@@ -35,17 +35,17 @@
           <div class="invalid-feedback">
             Please choose a description for your task.
           </div>
-          <div class="valid-feedback">Looks good!</div>
+          <div class="valid-feedback"></div>
         </div>
         
         <div class="row">
             <div class="col">
                 <label for="assignedTo">Assigned To</label>
-                <input type="text" class="form-control" id="assignedTo" placeholder="Assign your task to someone" required>
+                <input type="text" class="form-control" id="assignedTo" placeholder="Assign your task" required>
                 <div class="invalid-feedback">
                   Please assign your task.
                 </div>
-                <div class="valid-feedback">Looks good!</div>
+                <div class="valid-feedback"></div>
             </div>
             <div class="col">
                 <label for="dueDate">Due date</label>
@@ -53,7 +53,20 @@
                 <div class="invalid-feedback">
                   Please choose a due date for your task.
                 </div>
-                <div class="valid-feedback">Looks good!</div>
+                <div class="valid-feedback"></div>
+            </div>
+            <div class="col">
+              <label for="status">Status</label>
+              <select class="form-control" id="status" required>
+                <option selected>Select your status</option>
+                <option>To-do</option>
+                <option>In-progress</option>
+                <option>Done</option>
+              </select>
+              <div class="invalid-feedback">
+                Please choose a status for your task.
+              </div>
+              <div class="valid-feedback"></div>
             </div>
           </div>
 
@@ -65,43 +78,8 @@
       <!-- dummy tasks -->
     <section class="new-task-container">
       <h2 class="section-header">My Tasks:</h2>
-      <div class="list-group">
-        <div class="list-item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Take out trash</h5>
-              <p class="card-text">Trash pickup is on thursday morning, have bins ready outside</p>
-              <h6 class="card-subtitle mb-2 text-muted">Assigned to: Nick</h6>
-              <h6 class="card-subtitle mb-2 text-muted">Due Date: 2023-02-04</h6>
-              <button type="button" class="btn btn-success">Mark As Done</button>
-              <button type="button" class="btn btn-primary">DELETE</button>
-            </div>
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Deep clean kitchen</h5>
-              <p class="card-text">Clean microwave, stove, remove old food from fridge and organize pantry</p>
-              <h6 class="card-subtitle mb-2 text-muted">Assigned to: Sarah</h6>
-              <h6 class="card-subtitle mb-2 text-muted">Due Date: 2023-02-04</h6>
-              <button type="button" class="btn btn-success">Mark As Done</button>
-              <button type="button" class="btn btn-primary">DELETE</button>
-            </div>
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Take out trash</h5>
-              <p class="card-text">Trash pickup is on thursday morning, have bins ready outside</p>
-              <h6 class="card-subtitle mb-2 text-muted">Assigned to: Nick</h6>
-              <h6 class="card-subtitle mb-2 text-muted">Due Date: 2023-02-04</h6>
-              <button type="button" class="btn btn-success">Mark As Done</button>
-              <button type="button" class="btn btn-primary">DELETE</button>
-            </div>
-          </div>
-        </div>
+      <div class="list-group" id="tasksList">
+        
       </div>
     </section>
 
