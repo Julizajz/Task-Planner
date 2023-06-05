@@ -67,6 +67,29 @@ class TaskManager {
 
     }
 
+    load(){
+
+      // checks if tasks are saved in localStorage
+      if(localStorage.getItem('tasks')) {
+        // variable of json string of tasks in localStorage
+        const tasksJson = localStorage.getItem('tasks');
+        // converts it to array and store in taskManager
+        this.tasks = JSON.parse(tasksJson);
+      }
+
+      // checks if current id is saved in LocalStorage
+      if(localStorage.getItem('currentId')) {
+
+        // variable of current id string in localStoage
+        const currentId = localStorage.getItem('currentId');
+        // converts currentId to number and stores it in TaskManager
+        this.currentId = Number(currentId);
+
+
+
+      }
+    }
+
     render() {
      // variable storing html tasks
         const tasksHtmlList = [];
