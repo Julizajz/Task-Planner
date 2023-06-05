@@ -51,6 +51,22 @@ class TaskManager {
       return foundTask
     }
 
+    save(){
+      // converts tasks to json string of tasks
+      const tasksJson = JSON.stringify(this.tasks);
+
+      // store json string in local storage
+      localStorage.setItem("tasks", tasksJson);
+
+      // convertes current id to string
+      const currentId = String(this.currentId);
+
+      // stores current id in local storage
+      localStorage.setItem("currentId", currentId);
+
+
+    }
+
     render() {
      // variable storing html tasks
         const tasksHtmlList = [];
