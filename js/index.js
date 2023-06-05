@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // intitialises new instance of TaskManager
     const taskManager = new TaskManager();
+
+    // loads task from localStorage
+    taskManager.load();
+
+    // renders loaded tasks
+    taskManager.render();
     
     // task form selector
     const newTaskForm = document.getElementById('newTaskForm')
@@ -97,7 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
             );
             // test to see task with id of 0 
             console.log(taskManager.getTaskById(0))
-            
+            // saves task to local storage
+            taskManager.save();
             taskManager.render();
         
         // clears form fields after rendering
