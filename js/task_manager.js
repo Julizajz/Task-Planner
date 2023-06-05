@@ -1,5 +1,5 @@
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
-    return `<div class="list-item" data-task-id: "${id}">
+    return `<div class="list-item" data-task-id= ${id}>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${name} <span class="badge bg-danger">${status}</span></h5>
@@ -33,6 +33,24 @@ class TaskManager {
         this.tasks.push(task)
     }
 
+    getTaskById(taskId){
+      // variable to store the found task
+      let foundTask;
+      // loops over tasks to find the with the id passed as a parameter
+      for(let i = 0; i < this.tasks.length; i++) {
+
+        // variable for current task in loop
+        const task = this.tasks[i];
+        // compares and check if its the right task by comparing the task's id to the id passed as a parameter
+        if(task.id === taskId){
+          foundTask = task;
+        }
+      }
+
+      // return found task
+      return foundTask
+    }
+
     render() {
      // variable storing html tasks
         const tasksHtmlList = [];
@@ -49,7 +67,7 @@ class TaskManager {
             tasksHtmlList.push(taskHtml);
         }
 
-        const tasksHtml = tasksHtmlList.join('/n');
+        const tasksHtml = tasksHtmlList.join('\n');
 
         const tasksList = document.getElementById('tasksList');
         tasksList.innerHTML = tasksHtml;
