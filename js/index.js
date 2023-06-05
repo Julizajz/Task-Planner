@@ -126,6 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const task = taskManager.getTaskById(taskId);
             // updates task status to done
             task.status = "Done";
+            // calls save method to save tasks to local storage
+            taskManager.save();
             
             taskManager.render();
         }
