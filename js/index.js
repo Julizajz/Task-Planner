@@ -94,10 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
             assignedTo,
             dueDate,
             status
-        );
+            );
+            // test to see task with id of 0 
+            console.log(taskManager.getTaskById(0))
+            
+            taskManager.render();
         
-        taskManager.render();
-
         // clears form fields after rendering
         newTaskNameInput.value = '';
         newTaskDescriptionInput.value = '';
@@ -106,8 +108,31 @@ document.addEventListener('DOMContentLoaded', () => {
         newStatusInput.value = 'Select your status'
         console.log(taskManager);
         
+    });
+    
+    // variable stores tasklist div
+    const taskList = document.getElementById('tasksList')
+    taskList.addEventListener('click', (event) => {
+        
+        if(event.target.classList.contains('done-button')){
+            // parent task of done button
+            const parentTask = event.target.parentElement.parentElement.parentElement;
+            console.log(parentTask);
+            
+            // turns task id of parent task and turns it into number
+            const taskId = Number(parentTask.dataset.taskId);
+
+            // gets the task from the task manager using the taskid
+            const task = taskManager.getTaskById(taskId);
+            // updates task status to done
+            task.status = "Done";
+            
+            taskManager.render();
+        }
     })
+
 });
+
 
 
 
