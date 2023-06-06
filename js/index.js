@@ -138,8 +138,28 @@ document.addEventListener('DOMContentLoaded', () => {
             
             taskManager.render();
         }
-    })
 
+        // checks if delete-buttonw was clicked
+        if (event.target.classList.contains("delete-button")){
+
+            // parent task variable that holds parent of delete button
+            const parentTask = event.target.parentElement.parentElement.parentElement;
+
+            // turns task string taskid to number 
+            const taskId = Number(parentTask.dataset.taskId);
+
+            // deletes task
+            taskManager.deleteTask(taskId);
+
+            // saves to local storage
+            taskManager.save();
+
+            // renders tasks
+            taskManager.render();
+
+        }
+
+    })
 });
 
 
