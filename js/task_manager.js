@@ -91,9 +91,8 @@ class TaskManager {
     }
 
     deleteTask(taskId){
-
       // variable that creates empty arrat
-      newTasks = [];
+      const newTasks = [];
 
       // loops over tasks
       for(let i = 0; i < this.tasks.length; i++){
