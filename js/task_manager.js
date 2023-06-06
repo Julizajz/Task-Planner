@@ -90,6 +90,28 @@ class TaskManager {
       }
     }
 
+    deleteTask(taskId){
+
+      // variable that creates empty arrat
+      newTasks = [];
+
+      // loops over tasks
+      for(let i = 0; i < this.tasks.length; i++){
+
+        // gets current task in loop
+        const task = this.tasks[i]
+        // checks if task.id is not equal to taskId
+        if(task.id !== taskId){
+  
+          // pushes task to new tasks array
+          newTasks.push(task);
+        }
+      }
+
+      // sets this.tasks to newtasks
+      this.tasks = newTasks;
+    }
+
     render() {
      // variable storing html tasks
         const tasksHtmlList = [];
