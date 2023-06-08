@@ -13,7 +13,7 @@
  - Automtically saves user's tasks to local device, ensuring that data persists even when the page is refreshed or closed. 
 
 ## How to use the product
-1. Open your web browser and navigate to our [Live To-Do Site](https://to-do-list-planner-project.netlify.app/))
+1. Open your web browser and navigate to our [Live To-Do Site](https://to-do-list-planner-project.netlify.app/)
 2. Use the interface to add a new task with a name of the task, description, assigned person, due date and use the *Add Task* button.
 3. Use the *Mark as Done* button which changes the the 'Todo' to 'Done'.
 4. And use the *Delete* button tasks.
