@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // intitialises new instance of TaskManager
-    const taskManager = new TaskManager();
+    const taskManager = new TaskManager(0);
 
     // loads task from localStorage
     taskManager.load();
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const description = newTaskDescriptionInput.value;
         const assignedTo = newAssignedToInput.value;
         const dueDate = newDueDateInput.value;
-        const status = newStatusInput.value
+        
         
         
         
@@ -80,14 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
             failValidation++;
         }
         // validates status
-        if(status !== 'Select your status') {
-            newStatusInput.classList.add('is-valid');
-            newStatusInput.classList.remove('is-invalid');
-        }   else {
-            newStatusInput.classList.add('is-invalid');
-            newStatusInput.classList.remove('is-valid');
-            failValidation++;
-        }
+        // if(status !== 'Select your status') {
+        //     newStatusInput.classList.add('is-valid');
+        //     newStatusInput.classList.remove('is-invalid');
+        // }   else {
+        //     newStatusInput.classList.add('is-invalid');
+        //     newStatusInput.classList.remove('is-valid');
+        //     failValidation++;
+        // }
         
         // stops execution of new task if one input fails validation
         if(failValidation > 0) {
@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         newTaskDescriptionInput.value = '';
         newAssignedToInput.value = '';
         newDueDateInput.value = '';
-        newStatusInput.value = 'Select your status'
         console.log(taskManager);
         
     });
