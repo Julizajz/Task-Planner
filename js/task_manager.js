@@ -20,14 +20,14 @@ class TaskManager {
         this.currentId = currentId;
     }
 
-    addTask(name, description, assignedTo, dueDate, status) {
+    addTask(name, description, assignedTo, dueDate) {
         const task = {
             id: this.currentId++,
             name: name,
             description: description,
             assignedTo: assignedTo,
             dueDate: dueDate,
-            status: status
+            status: "To-Do"
         }
 
         this.tasks.push(task)
