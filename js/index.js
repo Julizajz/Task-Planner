@@ -30,15 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const description = newTaskDescriptionInput.value;
         const assignedTo = newAssignedToInput.value;
         const dueDate = newDueDateInput.value;
-        
-        
-        
-        
-        // 
-        // console.log(`Name: ${name}`);
-        // console.log(`Description: ${description}`);
-        // console.log(`Assigned To: ${assignedTo}`);
-        // console.log(`Due: ${dueDate}`);
+    
         
         // validates for min lenght of 4 characters
         if (name.length > 4) {
@@ -79,15 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
             newDueDateInput.classList.remove('is-valid');
             failValidation++;
         }
-        // validates status
-        // if(status !== 'Select your status') {
-        //     newStatusInput.classList.add('is-valid');
-        //     newStatusInput.classList.remove('is-invalid');
-        // }   else {
-        //     newStatusInput.classList.add('is-invalid');
-        //     newStatusInput.classList.remove('is-valid');
-        //     failValidation++;
-        // }
         
         // stops execution of new task if one input fails validation
         if(failValidation > 0) {
