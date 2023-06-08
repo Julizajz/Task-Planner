@@ -4,7 +4,7 @@
 ![Generic badge](https://img.shields.io/badge/Bootstrap-blueviolet.svg)
 ![Generic badge](https://img.shields.io/badge/JavaScript-yellow.svg)
 ## Description
-- This project was completed using tools such as HTML, CSS, Bootstrap, and Javascript to create the Task List application. 
+- This project was completed using tools such as HTML, CSS, Bootstrap, and Javascript to create the To-Do planner application. 
 - Through this application the user can easily list their tasks and manage their status by selecting our "mark as done" button or deleting the tasks when completed.
  ## Features
  - Add new tasks 
